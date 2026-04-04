@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: linear-gradient(#072019, #134e5e, #71b280);
+    height: 100vh;
+}
+
+/* WRAPPER */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 30px 15px;
+}
+
+/* CARD */
+.card {
+    width: 100%;
+    max-width: 850px;
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* LEFT */
+.left {
+    flex: 1 1 300px;
+    background: #1a3c34;
+    color: white;
+    padding: 20px;
+}
+
+.left h1 {
+    margin: 0 0 10px;
+}
+
+.info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.info img {
+    width: 20px;
+}
+
+/* SOCIAL */
+.social {
+    margin-top: 20px;
+}
+
+.social img {
+    width: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* RIGHT */
+.right {
+    flex: 1 1 300px;
+    padding: 20px;
+}
+
+.right h2 {
+    margin-bottom: 15px;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+textarea {
+    min-height: 80px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    background: #1a3c34;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0e2a24;
+}
