@@ -5,14 +5,16 @@ body {
     height: 100vh;
 }
 
-/* WRAPPER */
 .wrapper {
     display: flex;
     justify-content: center;
     padding: 30px 15px;
 }
 
-/* CARD */
+.wrapper:hover {
+    cursor: pointer;
+}
+
 .card {
     width: 100%;
     max-width: 850px;
@@ -23,12 +25,12 @@ body {
     overflow: hidden;
 }
 
-/* LEFT */
 .left {
     flex: 1 1 300px;
     background: #1a3c34;
     color: white;
     padding: 20px;
+    text-align: center;
 }
 
 .left h1 {
@@ -42,11 +44,6 @@ body {
     font-size: 14px;
 }
 
-.info img {
-    width: 20px;
-}
-
-/* SOCIAL */
 .social {
     margin-top: 20px;
 }
@@ -57,7 +54,6 @@ body {
     cursor: pointer;
 }
 
-/* RIGHT */
 .right {
     flex: 1 1 300px;
     padding: 20px;
@@ -67,7 +63,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* FORM */
 form {
     display: flex;
     flex-direction: column;
@@ -96,4 +91,13 @@ button {
 
 button:hover {
     background: #0e2a24;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
 }

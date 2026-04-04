@@ -1,20 +1,14 @@
-// ================= DATA =================
 let hilang = [];
 let ditemukan = [];
 
-// ================= UTIL =================
 function tgl() {
     const t = new Date();
     return `${t.getDate()}/${t.getMonth() + 1}/${t.getFullYear()}`;
 }
 
-// ================= STATISTIK =================
 function updateStat() {
     const totalData = hilang.length + ditemukan.length;
-    const persen =
-        totalData === 0
-            ? 0
-            : Math.round((ditemukan.length / totalData) * 100);
+    const persen = totalData === 0? 0 : Math.round((ditemukan.length / totalData) * 100);
 
     document.getElementById("total").innerHTML = totalData;
     document.getElementById("jumlah-hilang").innerHTML = hilang.length;
@@ -22,7 +16,6 @@ function updateStat() {
     document.getElementById("persen").innerHTML = `${persen}%`;
 }
 
-// ================= TAMPIL DATA =================
 function tampil(filter = "") {
     let htmlHilang = "";
     let htmlDitemukan = "";
@@ -94,7 +87,6 @@ function tampil(filter = "") {
         `<tr><td colspan="5" class="kosong">Belum ada laporan</td></tr>`;
 }
 
-// ================= TAMBAH DATA =================
 function tambahHilang() {
     const nama = document.getElementById("h-nama").value;
     const hp = document.getElementById("h-hp").value;
@@ -149,13 +141,9 @@ function tambahDitemukan() {
     updateStat();
     tampil();
 
-    [
-        "d-nama", "d-hp", "d-email", "d-alamat",
-        "d-barang", "d-lokasi", "d-deskripsi"
-    ].forEach(id => document.getElementById(id).value = "");
+    ["d-nama", "d-hp", "d-email", "d-alamat","d-barang", "d-lokasi", "d-deskripsi"].forEach(id => document.getElementById(id).value = "");
 }
 
-// ================= HAPUS =================
 function hapus(tipe, idx) {
     if (!confirm("Hapus data ini?")) return;
 
@@ -169,7 +157,6 @@ function hapus(tipe, idx) {
     tampil();
 }
 
-// ================= EDIT =================
 let editTipe, editIdx;
 
 function edit(tipe, idx) {
@@ -222,7 +209,6 @@ function tutupModal() {
     document.getElementById("modalEdit").style.display = "none";
 }
 
-// ================= CARI =================
 function cariBarang() {
     const keyword =
         document.getElementById("kata-cari").value.toLowerCase();
@@ -235,6 +221,5 @@ function resetCari() {
     tampil();
 }
 
-// ================= INIT =================
 updateStat();
 tampil();

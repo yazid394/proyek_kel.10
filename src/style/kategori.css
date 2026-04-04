@@ -42,8 +42,9 @@ body {
     background: white;
     padding: 20px;
     border-radius: 15px;
-    transition: 0.3s;;
-    box-shadow: 0 5px 0 10px rgba(0, 0, 0, 0,5);
+    transition: 0.3s;
+    ;
+    box-shadow: 0 5px 0 10px rgba(0, 0, 0, 0, 5);
 }
 
 .card:hover {
@@ -68,4 +69,13 @@ body {
 .card p {
     font-size: 14px;
     color: #666;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
 }
