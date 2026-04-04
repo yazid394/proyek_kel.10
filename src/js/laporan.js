@@ -205,7 +205,7 @@ function simpanEdit() {
     tutupModal();
 }
 
-function tutupModal() {
+function batalEdit() {
     document.getElementById("modalEdit").style.display = "none";
 }
 
