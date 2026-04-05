@@ -22,10 +22,7 @@ function tampil(filter = "") {
 
     hilang.forEach((d, i) => {
         if (
-            filter &&
-            !d.barang.toLowerCase().includes(filter) &&
-            !d.lokasi.toLowerCase().includes(filter) &&
-            !d.nama.toLowerCase().includes(filter)
+            filter && !d.barang.toLowerCase().includes(filter) && !d.lokasi.toLowerCase().includes(filter) && !d.nama.toLowerCase().includes(filter)
         ) return;
 
         htmlHilang += `
@@ -171,8 +168,7 @@ function edit(tipe, idx) {
     document.getElementById("e-hp").value = data.hp;
     document.getElementById("e-barang").value = data.barang;
     document.getElementById("e-lokasi").value = data.lokasi;
-    document.getElementById("e-deskripsi").value =
-        data.deskripsi || "";
+    document.getElementById("e-deskripsi").value = data.deskripsi || "";
 
     document.getElementById("modalEdit").style.display = "flex";
 }
