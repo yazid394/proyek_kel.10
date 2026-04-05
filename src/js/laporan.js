@@ -138,7 +138,10 @@ function tambahDitemukan() {
     updateStat();
     tampil();
 
-    ["d-nama", "d-hp", "d-email", "d-alamat","d-barang", "d-lokasi", "d-deskripsi"].forEach(id => document.getElementById(id).value = "");
+    let data = ["d-nama", "d-hp", "d-email", "d-alamat","d-barang", "d-lokasi", "d-deskripsi"]
+    for (let i = 0; i < data.length; i++) {
+        document.getElementById(data[i]).value = "";
+    }
 }
 
 function hapus(tipe, idx) {
