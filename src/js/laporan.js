@@ -8,7 +8,7 @@ function tgl() {
 
 function updateStat() {
     const totalData = hilang.length + ditemukan.length;
-    const persen = totalData === 0? 0 : Math.round((ditemukan.length / totalData) * 100);
+    const persen = totalData === 0 ? 0 : Math.round((ditemukan.length / totalData) * 100);
 
     document.getElementById("total").innerHTML = totalData;
     document.getElementById("jumlah-hilang").innerHTML = hilang.length;
@@ -47,8 +47,7 @@ function tampil(filter = "") {
     });
 
     ditemukan.forEach((d, i) => {
-        if (
-            filter &&
+        if (filter &&
             !d.barang.toLowerCase().includes(filter) &&
             !d.lokasi.toLowerCase().includes(filter) &&
             !d.nama.toLowerCase().includes(filter)
@@ -163,10 +162,7 @@ function edit(tipe, idx) {
     editTipe = tipe;
     editIdx = idx;
 
-    const data = tipe === "hilang"
-        ? hilang[idx]
-        : ditemukan[idx];
-
+    const data = tipe === "hilang" ? hilang[idx] : ditemukan[idx];
     document.getElementById("e-nama").value = data.nama;
     document.getElementById("e-hp").value = data.hp;
     document.getElementById("e-barang").value = data.barang;
@@ -185,8 +181,7 @@ function simpanEdit() {
         deskripsi: document.getElementById("e-deskripsi").value,
         tgl:
             editTipe === "hilang"
-                ? hilang[editIdx].tgl
-                : ditemukan[editIdx].tgl
+                ? hilang[editIdx].tgl : ditemukan[editIdx].tgl
     };
 
     if (!dataBaru.nama || !dataBaru.hp || !dataBaru.barang || !dataBaru.lokasi) {
@@ -209,8 +204,7 @@ function batalEdit() {
 }
 
 function cariBarang() {
-    const keyword =
-        document.getElementById("kata-cari").value.toLowerCase();
+    const keyword = document.getElementById("kata-cari").value.toLowerCase();
 
     tampil(keyword);
 }
